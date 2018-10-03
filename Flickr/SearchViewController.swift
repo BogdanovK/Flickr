@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SearchViewController.swift
 //  Flickr
 //
 //  Created by Константин Богданов on 03.10.2018.
@@ -8,7 +8,8 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+
+class SearchViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
