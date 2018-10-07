@@ -8,7 +8,9 @@
 
 import UIKit
 
-
+/**
+ Контроллер поиска картинок.
+ */
 class SearchViewController: UIViewController {
 
     override func viewDidLoad() {
