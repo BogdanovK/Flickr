@@ -8,12 +8,20 @@
 
 import UIKit
 
-
 /**
  Контроллер отображения популярных картинок.
  */
-class PopularPhotosViewController: UIViewController {
+
+class PopularPhotosViewController: UIViewController, TabBarSetupProtocol {
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor.red
+    }
+    
+//MARK: TabBarSetupProtocol
+    
+    func setupTapBarParameters() {
+        self.tabBarItem.title = kPopularPhotosButtonTitle
     }
 }

@@ -11,9 +11,17 @@ import UIKit
 /**
  Контроллер изменения настроек пользователя.
  */
-class SettingsViewController: UIViewController {
+
+class SettingsViewController: UIViewController, TabBarSetupProtocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor.green
+    }
+    
+//MARK: TabBarSetupProtocol
+    
+    func setupTapBarParameters() {
+        self.tabBarItem.title = kSettingsButtonTitle
     }
 }

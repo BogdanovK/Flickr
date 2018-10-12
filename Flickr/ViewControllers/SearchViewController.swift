@@ -11,13 +11,18 @@ import UIKit
 /**
  Контроллер поиска картинок.
  */
-class SearchViewController: UIViewController {
+
+class SearchViewController: UIViewController, TabBarSetupProtocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.view.backgroundColor = UIColor.gray
     }
-
-
+    
+//MARK: TabBarSetupProtocol
+    
+    func setupTapBarParameters() {
+        self.tabBarItem.title = kSearchButtonTitle
+    }
 }
 
