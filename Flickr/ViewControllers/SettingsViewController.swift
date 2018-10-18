@@ -13,7 +13,20 @@ import UIKit
  */
 
 class SettingsViewController: UIViewController, TabBarSetupProtocol {
-
+    
+    let tableView:UITableView
+    
+    required init?(coder aDecoder: NSCoder) {
+        
+     self.tableView = UITableView(frame: CGRect(x: 0, y: 0, width: 0, height: 0), style: .plain)
+     super.init(coder: aDecoder)
+        
+    }
+    
+    init() {
+        self.tableView = UITableView(frame: CGRect(x: 0, y: 0, width: 0, height: 0), style: .plain)
+        super.init(nibName: nil, bundle: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.green
