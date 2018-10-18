@@ -16,10 +16,10 @@ class TabBarViewController: UIViewController {
     
     var bottomTabBar: UITabBarController = UITabBarController()
     
-    var popularPhotosController: PopularPhotosViewController = PopularPhotosViewController()
-    var savedPhotosController: SavedPhotosViewController = SavedPhotosViewController()
-    var searchController: SearchViewController = SearchViewController()
-    var settingsController: SettingsViewController = SettingsViewController()
+    var popularPhotosController = PopularPhotosViewController()
+    var savedPhotosController = SavedPhotosViewController()
+    var searchController = SearchViewController()
+    var settingsController = SettingsViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
