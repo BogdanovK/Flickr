@@ -12,3 +12,4 @@ let kPopularPhotosButtonTitle  = "Популярные"
 let kSavedPhotosButtonTitle    = "Сохраненные"
 let kSearchButtonTitle         = "Поиск"
 let kSettingsButtonTitle       = "Настройки"
+
