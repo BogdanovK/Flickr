@@ -39,19 +39,23 @@ class SettingsViewController: UIViewController, TabBarSetupProtocol,UITableViewD
     
     func setupSearchBar() {
 
-        let searchBar = SearchBar.init(withCustomPlaceHolder: "Поиск в настройках")
-        searchBar!.backgroundColor = UIColor.white
-        searchBar!.translatesAutoresizingMaskIntoConstraints = false
-        searchBar!.layer.cornerRadius = 10
-        searchBar!.textAlignment = NSTextAlignment.center
-        self.view.addSubview(searchBar!)
+        if let searchBar = SearchBar.init(withCustomPlaceHolder: "Поиск в настройках") {
+          
+            searchBar.backgroundColor = UIColor.white
+            searchBar.translatesAutoresizingMaskIntoConstraints = false
+            searchBar.layer.cornerRadius = 10
+            searchBar.textAlignment = NSTextAlignment.center
+            self.view.addSubview(searchBar)
+            
+            NSLayoutConstraint.activate([
+                searchBar.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
+                searchBar.leftAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leftAnchor, constant:5),
+                searchBar.rightAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.rightAnchor, constant:-5),
+                searchBar.heightAnchor.constraint(equalToConstant: 40)
+                ])
+        }
         
-        NSLayoutConstraint.activate([
-            searchBar!.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
-            searchBar!.leftAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leftAnchor, constant:5),
-            searchBar!.rightAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.rightAnchor, constant:-5),
-            searchBar!.heightAnchor.constraint(equalToConstant: 40)
-            ])
+
     }
 //MARK: TableView UITableViewDelegate,UITableViewDataSource,Settings
     
