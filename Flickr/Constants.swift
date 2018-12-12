@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Константы тайтлов контроллеров
+ */
 let kPopularPhotosButtonTitle  = "Популярные"
 let kSavedPhotosButtonTitle    = "Сохраненные"
 let kSearchButtonTitle         = "Поиск"

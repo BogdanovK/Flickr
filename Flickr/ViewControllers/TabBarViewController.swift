@@ -44,7 +44,6 @@ class TabBarViewController: UIViewController {
         for case let vc as TabBarSetupProtocol in bottomTabBar.viewControllers! {
             vc.setupTapBarParameters()
         }
-        //есть решение лучше??
     }
     
 }
