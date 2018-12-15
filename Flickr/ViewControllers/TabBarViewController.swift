@@ -41,6 +41,7 @@ class TabBarViewController: UIViewController {
     
     func setupControllers() {
         bottomTabBar.viewControllers = [popularPhotosController, savedPhotosController, searchController, settingsController]
+
         for case let vc as TabBarSetupProtocol in bottomTabBar.viewControllers! {
             vc.setupTapBarParameters()
         }

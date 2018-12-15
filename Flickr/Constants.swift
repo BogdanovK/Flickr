@@ -8,7 +8,9 @@
 
 import Foundation
 
-let kPopularPhotosButtonTitle  = "Популярные"
-let kSavedPhotosButtonTitle    = "Сохраненные"
-let kSearchButtonTitle         = "Поиск"
-let kSettingsButtonTitle       = "Настройки"
+class Constants {
+    static let popularPhotosButtonTitle = "Популярные"
+    static let savedPhotosButtonTitle = "Сохраненные"
+    static let searchButtonTitle = "Поиск"
+    static let settingsButtonTitle  = "Настройки"
+}

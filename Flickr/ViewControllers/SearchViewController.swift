@@ -22,7 +22,8 @@ class SearchViewController: UIViewController, TabBarSetupProtocol {
 //MARK: TabBarSetupProtocol
     
     func setupTapBarParameters() {
-        self.tabBarItem.title = kSearchButtonTitle
+        self.tabBarItem.title = Constants.searchButtonTitle
+        self.tabBarItem.image = UIImage(named: "search")
     }
 }
 

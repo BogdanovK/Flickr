@@ -22,6 +22,7 @@ class SavedPhotosViewController: UIViewController, TabBarSetupProtocol{
 //MARK: TabBarSetupProtocol
     
     func setupTapBarParameters() {
-        self.tabBarItem.title = kSavedPhotosButtonTitle
+        self.tabBarItem.title = Constants.savedPhotosButtonTitle
+        self.tabBarItem.image = UIImage(named: "saved")
     }
 }

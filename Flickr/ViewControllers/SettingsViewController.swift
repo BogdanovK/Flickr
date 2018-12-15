@@ -91,6 +91,7 @@ class SettingsViewController: UIViewController, TabBarSetupProtocol,UITableViewD
 //MARK: TabBarSetupProtocol
     
     func setupTapBarParameters() {
-        self.tabBarItem.title = kSettingsButtonTitle
+        self.tabBarItem.title = Constants.settingsButtonTitle
+        self.tabBarItem.image = UIImage(named: "settings")
     }
 }

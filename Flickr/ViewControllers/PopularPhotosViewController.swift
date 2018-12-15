@@ -22,6 +22,7 @@ class PopularPhotosViewController: UIViewController, TabBarSetupProtocol {
 //MARK: TabBarSetupProtocol
     
     func setupTapBarParameters() {
-        self.tabBarItem.title = kPopularPhotosButtonTitle
+        self.tabBarItem.title = Constants.popularPhotosButtonTitle
+        self.tabBarItem.image = UIImage(named: "popular")
     }
 }
