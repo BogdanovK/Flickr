@@ -11,9 +11,9 @@
 		145725AE21651F3D000BF359 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145725AD21651F3D000BF359 /* SearchViewController.swift */; };
 		145725B321651F42000BF359 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 145725B221651F42000BF359 /* Assets.xcassets */; };
 		145725C0216529A3000BF359 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145725BF216529A3000BF359 /* SettingsViewController.swift */; };
+		146E6D0D21C6BC7A00C2A7C1 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146E6D0C21C6BC7A00C2A7C1 /* NetworkService.swift */; };
 		2C533E2E217FB2C50039EF73 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C533E2D217FB2C50039EF73 /* SearchBar.swift */; };
 		2C8CBF6621C19A4B006844C2 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8CBF6521C19A4B006844C2 /* SearchCell.swift */; };
-		2C8CBF6A21C1A784006844C2 /* like.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C8CBF6921C1A784006844C2 /* like.png */; };
 		2CA139D3216E9523003FC7F9 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA139D2216E9523003FC7F9 /* TabBarViewController.swift */; };
 		2CA139D6216E95E4003FC7F9 /* PopularPhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA139D4216E95E4003FC7F9 /* PopularPhotosViewController.swift */; };
 		2CA139D7216E95E4003FC7F9 /* SavedPhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA139D5216E95E4003FC7F9 /* SavedPhotosViewController.swift */; };
@@ -30,9 +30,9 @@
 		145725B221651F42000BF359 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		145725B721651F42000BF359 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		145725BF216529A3000BF359 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		146E6D0C21C6BC7A00C2A7C1 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		2C533E2D217FB2C50039EF73 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		2C8CBF6521C19A4B006844C2 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
-		2C8CBF6921C1A784006844C2 /* like.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = like.png; sourceTree = "<group>"; };
 		2CA139D2216E9523003FC7F9 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		2CA139D4216E95E4003FC7F9 /* PopularPhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularPhotosViewController.swift; sourceTree = "<group>"; };
 		2CA139D5216E95E4003FC7F9 /* SavedPhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedPhotosViewController.swift; sourceTree = "<group>"; };
@@ -75,7 +75,6 @@
 			children = (
 				2CA139D8216E96FD003FC7F9 /* Constants.swift */,
 				145725AB21651F3D000BF359 /* AppDelegate.swift */,
-				2C8CBF6921C1A784006844C2 /* like.png */,
 				2C8CBF6421C199FE006844C2 /* Cell */,
 				2C533E2C217FB2AD0039EF73 /* View */,
 				145725BE21652742000BF359 /* ViewControllers */,
@@ -102,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				2C533E2D217FB2C50039EF73 /* SearchBar.swift */,
+				146E6D0C21C6BC7A00C2A7C1 /* NetworkService.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -175,7 +175,6 @@
 			files = (
 				145725B321651F42000BF359 /* Assets.xcassets in Resources */,
 				2CA139DB216EA7E1003FC7F9 /* Default-568h@2x.png in Resources */,
-				2C8CBF6A21C1A784006844C2 /* like.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,6 +195,7 @@
 				2CA139D7216E95E4003FC7F9 /* SavedPhotosViewController.swift in Sources */,
 				2C533E2E217FB2C50039EF73 /* SearchBar.swift in Sources */,
 				145725C0216529A3000BF359 /* SettingsViewController.swift in Sources */,
+				146E6D0D21C6BC7A00C2A7C1 /* NetworkService.swift in Sources */,
 				2CA139D6216E95E4003FC7F9 /* PopularPhotosViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

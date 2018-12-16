@@ -12,7 +12,7 @@ import UIKit
  Контроллер изменения настроек пользователя.
  */
 
-class SettingsViewController: UIViewController, TabBarSetupProtocol {
+class SettingsViewController: UIViewController, TabBarSetupProtocol, UITextFieldDelegate {
 
     let tableView:UITableView
     let delegateDataSource = SettingsDelegateDataSource()
@@ -46,6 +46,7 @@ class SettingsViewController: UIViewController, TabBarSetupProtocol {
             searchBar.translatesAutoresizingMaskIntoConstraints = false
             searchBar.layer.cornerRadius = 10
             searchBar.textAlignment = NSTextAlignment.center
+            searchBar.delegate = self
             self.view.addSubview(searchBar)
             
             NSLayoutConstraint.activate([
@@ -72,7 +73,25 @@ class SettingsViewController: UIViewController, TabBarSetupProtocol {
             self.tableView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant:50),
             ])
     }
-    
+
+    //MARK: UITextFieldDelegate
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        let url = URL.init(string: "https://mir24.tv/uploaded/images/2017/December/dc976ec848368fe8ca7f5212316fc7f438c802d421b410d6ade1da7d6fa41ace.jpg")
+        NetworkService.loadImage(from: url!) { (image) in
+            
+            if let sendedImage = image {
+                DispatchQueue.main.async {
+                    let imageView = UIImageView(frame: CGRect(x: 50, y: 200, width: 200, height: 200))
+                    imageView.image = sendedImage
+                    
+                    self.view.addSubview(imageView)
+                }
+            }
+        }
+        return true
+    }
+
 //MARK: TabBarSetupProtocol
     
     func setupTapBarParameters() {
@@ -80,3 +99,5 @@ class SettingsViewController: UIViewController, TabBarSetupProtocol {
         self.tabBarItem.image = UIImage(named: "settings")
     }
 }
+
+

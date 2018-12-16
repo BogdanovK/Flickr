@@ -65,7 +65,7 @@ class SearchCell: UITableViewCell {
         self.likeButton.leftAnchor.constraint(equalTo: self.contentView.leftAnchor, constant: 15).isActive = true
         
         self.descriptionLabel.topAnchor.constraint(equalTo: self.photoImageView.bottomAnchor, constant: 5).isActive = true
-        self.descriptionLabel.leftAnchor.constraint(equalTo: self.likeButton.leftAnchor, constant: 55).isActive = true
+        self.descriptionLabel.leftAnchor.constraint(equalTo: self.likeButton.rightAnchor, constant: 5).isActive = true
         self.descriptionLabel.rightAnchor.constraint(equalTo: self.contentView.rightAnchor, constant: -5).isActive = true
         self.descriptionLabel.heightAnchor.constraint(equalToConstant: 50).isActive = true
         self.descriptionLabel.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: -5).isActive = true
