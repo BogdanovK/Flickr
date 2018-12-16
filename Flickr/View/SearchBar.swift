@@ -18,7 +18,7 @@ class SearchBar: UITextField {
     
     init?(withCustomPlaceHolder: String) {
         super.init(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 50))
-        self.customPlaceHolder = withCustomPlaceHolder
+        self.placeholder = withCustomPlaceHolder
     }
     
     required init?(coder aDecoder: NSCoder) {
