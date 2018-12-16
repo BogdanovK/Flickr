@@ -12,9 +12,10 @@ import UIKit
  Контроллер изменения настроек пользователя.
  */
 
-class SettingsViewController: UIViewController, TabBarSetupProtocol,UITableViewDelegate,UITableViewDataSource {
+class SettingsViewController: UIViewController, TabBarSetupProtocol {
 
     let tableView:UITableView
+    let delegateDataSource = SettingsDelegateDataSource()
     
     required init?(coder aDecoder: NSCoder) {
         self.tableView = UITableView(frame: CGRect(x: 0, y: 0, width: 0, height: 0), style: .plain)
@@ -55,29 +56,13 @@ class SettingsViewController: UIViewController, TabBarSetupProtocol,UITableViewD
                 ])
         }
         
-
-    }
-//MARK: TableView UITableViewDelegate,UITableViewDataSource,Settings
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        
-        return 1
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
-    }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = UITableViewCell.init(style: UITableViewCell.CellStyle.default, reuseIdentifier: "Cell")
-        cell.textLabel?.text = "Настройка № \(indexPath.row)"
-        return cell
-    }
-
     func setupTableView() {
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
+        self.tableView.register(SettingsCell.classForCoder(), forCellReuseIdentifier: SettingsCell.settingsCellIdentifier)
+        self.tableView.delegate = delegateDataSource
+        self.tableView.dataSource = delegateDataSource
         self.tableView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(self.tableView)
         

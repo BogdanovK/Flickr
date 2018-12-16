@@ -19,6 +19,8 @@
 		2CA139D7216E95E4003FC7F9 /* SavedPhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA139D5216E95E4003FC7F9 /* SavedPhotosViewController.swift */; };
 		2CA139D9216E96FD003FC7F9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA139D8216E96FD003FC7F9 /* Constants.swift */; };
 		2CA139DB216EA7E1003FC7F9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CA139DA216EA7E1003FC7F9 /* Default-568h@2x.png */; };
+		B30855FA21C40F2F0095B966 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30855F921C40F2F0095B966 /* SettingsCell.swift */; };
+		B30855FC21C41C930095B966 /* SettingsDelegateDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30855FB21C41C930095B966 /* SettingsDelegateDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		2CA139D5216E95E4003FC7F9 /* SavedPhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedPhotosViewController.swift; sourceTree = "<group>"; };
 		2CA139D8216E96FD003FC7F9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2CA139DA216EA7E1003FC7F9 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		B30855F921C40F2F0095B966 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
+		B30855FB21C41C930095B966 /* SettingsDelegateDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDelegateDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,7 @@
 				145725AD21651F3D000BF359 /* SearchViewController.swift */,
 				145725BF216529A3000BF359 /* SettingsViewController.swift */,
 				2CA139D2216E9523003FC7F9 /* TabBarViewController.swift */,
+				B30855FB21C41C930095B966 /* SettingsDelegateDataSource.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -105,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				2C8CBF6521C19A4B006844C2 /* SearchCell.swift */,
+				B30855F921C40F2F0095B966 /* SettingsCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -183,7 +189,9 @@
 				145725AE21651F3D000BF359 /* SearchViewController.swift in Sources */,
 				145725AC21651F3D000BF359 /* AppDelegate.swift in Sources */,
 				2CA139D3216E9523003FC7F9 /* TabBarViewController.swift in Sources */,
+				B30855FC21C41C930095B966 /* SettingsDelegateDataSource.swift in Sources */,
 				2CA139D9216E96FD003FC7F9 /* Constants.swift in Sources */,
+				B30855FA21C40F2F0095B966 /* SettingsCell.swift in Sources */,
 				2C8CBF6621C19A4B006844C2 /* SearchCell.swift in Sources */,
 				2CA139D7216E95E4003FC7F9 /* SavedPhotosViewController.swift in Sources */,
 				2C533E2E217FB2C50039EF73 /* SearchBar.swift in Sources */,

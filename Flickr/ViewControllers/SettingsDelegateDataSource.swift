@@ -1,0 +1,30 @@
+//
+//  SettingsDelegateDataSource.swift
+//  Flickr
+//
+//  Created by Kozaderov Ivan on 14/12/2018.
+//  Copyright © 2018 Константин Богданов. All rights reserved.
+//
+
+import UIKit
+
+class SettingsDelegateDataSource: NSObject,UITableViewDataSource,UITableViewDelegate {
+
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        var cell = tableView.dequeueReusableCell(withIdentifier:  SettingsCell.settingsCellIdentifier, for: indexPath) as? SettingsCell
+        
+        if  cell == nil {
+            cell = SettingsCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: SettingsCell.settingsCellIdentifier)
+        }
+        
+        cell?.settingsCellLabel.text = "settingsCellLabel"
+        cell?.setNeedsUpdateConstraints()
+        return cell!
+    }
+}
