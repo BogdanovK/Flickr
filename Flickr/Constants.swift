@@ -14,3 +14,4 @@ class Constants {
     static let searchButtonTitle = "Поиск"
     static let settingsButtonTitle  = "Настройки"
 }
+
