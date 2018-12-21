@@ -12,7 +12,7 @@ import UIKit
  Контроллер изменения настроек пользователя.
  */
 
-class SettingsViewController: UIViewController, TabBarSetupProtocol {
+class SettingsViewController: UIViewController, TabBarSetupProtocol,UITextFieldDelegate {
 
     let tableView:UITableView
     let delegateDataSource = SettingsDelegateDataSource()
@@ -46,6 +46,8 @@ class SettingsViewController: UIViewController, TabBarSetupProtocol {
             searchBar.translatesAutoresizingMaskIntoConstraints = false
             searchBar.layer.cornerRadius = 10
             searchBar.textAlignment = NSTextAlignment.center
+            searchBar.delegate = self
+            searchBar.becomeFirstResponder()
             self.view.addSubview(searchBar)
             
             NSLayoutConstraint.activate([
@@ -71,6 +73,14 @@ class SettingsViewController: UIViewController, TabBarSetupProtocol {
             self.tableView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height),
             self.tableView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant:50),
             ])
+    }
+    
+//MARK: UITextFieldDelegate
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+       textField.resignFirstResponder()
+       return true
     }
     
 //MARK: TabBarSetupProtocol
