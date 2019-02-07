@@ -12,8 +12,15 @@ class SearchCell: UITableViewCell {
 
     static let reuseIdentifier = "searchCellIdentifier"
     
-    let photoImageView = UIImageView()
+    private let photoImageView = UIImageView()
     let descriptionLabel = UILabel()
+    var photo: UIImage? { set {
+            self.photoImageView.image = newValue
+        }
+        get {
+            return self.photoImageView.image
+        }
+    }
     let likeButton = UIButton()
     var isLike = false
     
@@ -32,6 +39,7 @@ class SearchCell: UITableViewCell {
         self.contentView.addSubview(self.likeButton)
         self.selectionStyle = .none
         self.descriptionLabel.numberOfLines = 0
+        self.photoImageView.contentMode = UIView.ContentMode.scaleAspectFit
         
         let imageLike = UIImage.init(named: "like.png")
         self.likeButton.setImage(imageLike, for: .normal)
