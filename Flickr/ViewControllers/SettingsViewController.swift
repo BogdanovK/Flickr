@@ -40,7 +40,7 @@ class SettingsViewController: UIViewController, TabBarSetupProtocol {
     
     func setupSearchBar() {
 
-        if let searchBar = SearchBar.init(withCustomPlaceHolder: "Поиск в настройках") {
+        let searchBar = SearchBar.init(withCustomPlaceHolder: "Поиск в настройках")
           
             searchBar.backgroundColor = UIColor.white
             searchBar.translatesAutoresizingMaskIntoConstraints = false
@@ -54,8 +54,6 @@ class SettingsViewController: UIViewController, TabBarSetupProtocol {
                 searchBar.rightAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.rightAnchor, constant:-5),
                 searchBar.heightAnchor.constraint(equalToConstant: 40)
                 ])
-        }
-        
     }
     
     
