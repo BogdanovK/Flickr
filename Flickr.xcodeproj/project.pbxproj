@@ -23,7 +23,6 @@
 		2CA139DB216EA7E1003FC7F9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CA139DA216EA7E1003FC7F9 /* Default-568h@2x.png */; };
 		B30855FA21C40F2F0095B966 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30855F921C40F2F0095B966 /* SettingsCell.swift */; };
 		B30855FC21C41C930095B966 /* SettingsDelegateDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30855FB21C41C930095B966 /* SettingsDelegateDataSource.swift */; };
-		B3E89465220CA636005CB4DF /* SearchDelegateDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E89464220CA636005CB4DF /* SearchDelegateDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,7 +44,6 @@
 		2CA139DA216EA7E1003FC7F9 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		B30855F921C40F2F0095B966 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 		B30855FB21C41C930095B966 /* SettingsDelegateDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDelegateDataSource.swift; sourceTree = "<group>"; };
-		B3E89464220CA636005CB4DF /* SearchDelegateDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDelegateDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +116,6 @@
 				145725BF216529A3000BF359 /* SettingsViewController.swift */,
 				2CA139D2216E9523003FC7F9 /* TabBarViewController.swift */,
 				B30855FB21C41C930095B966 /* SettingsDelegateDataSource.swift */,
-				B3E89464220CA636005CB4DF /* SearchDelegateDataSource.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -222,7 +219,6 @@
 				2CA139D7216E95E4003FC7F9 /* SavedPhotosViewController.swift in Sources */,
 				2C533E2E217FB2C50039EF73 /* SearchBar.swift in Sources */,
 				145725C0216529A3000BF359 /* SettingsViewController.swift in Sources */,
-				B3E89465220CA636005CB4DF /* SearchDelegateDataSource.swift in Sources */,
 				142787A32207104E00A7F4BF /* ImageModel.swift in Sources */,
 				2CA139D6216E95E4003FC7F9 /* PopularPhotosViewController.swift in Sources */,
 			);

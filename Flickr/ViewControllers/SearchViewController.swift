@@ -24,19 +24,6 @@ class SearchViewController: UIViewController, TabBarSetupProtocol, UITextFieldDe
     private let searchService = PhotosSearchService()
     private var searchClosure = DispatchWorkItem {}
     
-    let tableView:UITableView
-    let delegateDataSource = SearchDelegateDataSource()
-    
-    required init?(coder aDecoder: NSCoder) {
-        self.tableView = UITableView(frame: CGRect(x: 0, y: 0, width: 0, height: 0), style: .plain)
-        super.init(coder: aDecoder)
-    }
-    
-    init() {
-        self.tableView = UITableView(frame: CGRect(x: 0, y: 0, width: 0, height: 0), style: .plain)
-        super.init(nibName: nil, bundle: nil)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addSubview(self.searchBar)
@@ -48,24 +35,7 @@ class SearchViewController: UIViewController, TabBarSetupProtocol, UITextFieldDe
             ])
         
         self.searchBar.delegate = self
-        setupTableView()
     }
-    
-    func setupTableView() {
-        self.tableView.register(SearchCell.classForCoder(), forCellReuseIdentifier: SearchCell.reuseIdentifier)
-        self.tableView.delegate = delegateDataSource
-        self.tableView.dataSource = delegateDataSource
-        self.tableView.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(self.tableView)
-        
-        NSLayoutConstraint.activate([
-            self.tableView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width),
-            self.tableView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height),
-            self.tableView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant:50),
-            ])
-    }
-    
-//MARK: UITextFieldDelegate
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         self.startSearch(for: textField.text! + string)
