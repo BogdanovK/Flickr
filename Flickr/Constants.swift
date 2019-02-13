@@ -15,3 +15,7 @@ class Constants {
     static let settingsButtonTitle  = "Настройки"
 }
 
+class MathematicConstants {
+    static let delay: TimeInterval = 0.4
+}
+

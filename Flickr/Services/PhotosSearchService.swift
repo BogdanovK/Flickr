@@ -29,7 +29,7 @@ class PhotosSearchService: NSObject {
 
         for model in models {
             group.enter()
-            if let url = URL(string: model.urlSquare) {
+            if let url = URL(string: model.urlMedium) {
                 
                 self.loadData(url: url) { data in
                     

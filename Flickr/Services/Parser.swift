@@ -18,7 +18,7 @@ class Parser {
                 if let photos = json["photo"] as? [[String : Any]] {
                     for dictionary in photos  {
                         if let title = dictionary["title"] as? String, let urlMedium = dictionary["url_m"] as? String, let urlSquare = dictionary["url_sq"] as? String {
-                            models.append(ImagePathModel(name: title, descript: "", urlSquare: urlSquare, urlMedium: urlMedium))
+                            models.append(ImagePathModel(name: title, descript: title, urlSquare: urlSquare, urlMedium: urlMedium))
                         }
                     }
                 }
