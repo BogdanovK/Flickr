@@ -17,6 +17,7 @@ class PopularPhotosViewController: UIViewController, TabBarSetupProtocol {
     let collectionView:UICollectionView
     let delegateDataSource = CollectionViewDelegateDataSource()
     let flowLayout = UICollectionViewFlowLayout()
+    private let searchService = PhotosSearchService()
     required init?(coder aDecoder: NSCoder) {
         self.collectionView = UICollectionView(frame: CGRect(x: 0, y: 0, width: 0, height: 0), collectionViewLayout:flowLayout)
         super.init(coder: aDecoder)
@@ -31,8 +32,18 @@ class PopularPhotosViewController: UIViewController, TabBarSetupProtocol {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.red
         setupCollectionView()
+
+        self.searchService.getPopularPhotos(for: "faves", onComplete: { photos in
+            self.delegateDataSource.models = photos
+            self.updateCollection()
+        })
     }
-   
+    
+    private func updateCollection() {
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
+        }
+    }
     func setupCollectionView() {
         self.collectionView.register(CollectionViewCell.classForCoder(), forCellWithReuseIdentifier: CollectionViewCell.reuseIdentifier)
         self.collectionView.delegate = delegateDataSource
