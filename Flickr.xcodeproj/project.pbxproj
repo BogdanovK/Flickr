@@ -26,7 +26,8 @@
 		2CA139DB216EA7E1003FC7F9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CA139DA216EA7E1003FC7F9 /* Default-568h@2x.png */; };
 		B30855FA21C40F2F0095B966 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30855F921C40F2F0095B966 /* SettingsCell.swift */; };
 		B30855FC21C41C930095B966 /* SettingsDelegateDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30855FB21C41C930095B966 /* SettingsDelegateDataSource.swift */; };
-		B35812E522172BF500C60016 /* CollectionViewDelegateDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35812E422172BF500C60016 /* CollectionViewDelegateDataSource.swift */; };
+		B35714FC225675CA00A5C925 /* PopularPhotosCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35714FB225675CA00A5C925 /* PopularPhotosCollectionViewDelegate.swift */; };
+		B35714FE2256761400A5C925 /* PopularPhotosCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35714FD2256761400A5C925 /* PopularPhotosCollectionViewDataSource.swift */; };
 		B35812E722172CD500C60016 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35812E622172CD500C60016 /* CollectionViewCell.swift */; };
 		B3E89465220CA636005CB4DF /* SearchTableHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E89464220CA636005CB4DF /* SearchTableHandler.swift */; };
 /* End PBXBuildFile section */
@@ -53,7 +54,8 @@
 		2CA139DA216EA7E1003FC7F9 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		B30855F921C40F2F0095B966 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 		B30855FB21C41C930095B966 /* SettingsDelegateDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDelegateDataSource.swift; sourceTree = "<group>"; };
-		B35812E422172BF500C60016 /* CollectionViewDelegateDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewDelegateDataSource.swift; sourceTree = "<group>"; };
+		B35714FB225675CA00A5C925 /* PopularPhotosCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularPhotosCollectionViewDelegate.swift; sourceTree = "<group>"; };
+		B35714FD2256761400A5C925 /* PopularPhotosCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularPhotosCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		B35812E622172CD500C60016 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		B3E89464220CA636005CB4DF /* SearchTableHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -132,7 +134,8 @@
 				2CA139D2216E9523003FC7F9 /* TabBarViewController.swift */,
 				B30855FB21C41C930095B966 /* SettingsDelegateDataSource.swift */,
 				B3E89464220CA636005CB4DF /* SearchTableHandler.swift */,
-				B35812E422172BF500C60016 /* CollectionViewDelegateDataSource.swift */,
+				B35714FB225675CA00A5C925 /* PopularPhotosCollectionViewDelegate.swift */,
+				B35714FD2256761400A5C925 /* PopularPhotosCollectionViewDataSource.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -232,8 +235,8 @@
 				145725AE21651F3D000BF359 /* SearchViewController.swift in Sources */,
 				1420A1F2221397A500676559 /* Parser.swift in Sources */,
 				145725AC21651F3D000BF359 /* AppDelegate.swift in Sources */,
+				B35714FE2256761400A5C925 /* PopularPhotosCollectionViewDataSource.swift in Sources */,
 				2CA139D3216E9523003FC7F9 /* TabBarViewController.swift in Sources */,
-				B35812E522172BF500C60016 /* CollectionViewDelegateDataSource.swift in Sources */,
 				B30855FC21C41C930095B966 /* SettingsDelegateDataSource.swift in Sources */,
 				2CA139D9216E96FD003FC7F9 /* Constants.swift in Sources */,
 				14BCFF6C22138FF50058BE61 /* API.swift in Sources */,
@@ -241,6 +244,7 @@
 				B30855FA21C40F2F0095B966 /* SettingsCell.swift in Sources */,
 				2C8CBF6621C19A4B006844C2 /* SearchCell.swift in Sources */,
 				2CA139D7216E95E4003FC7F9 /* SavedPhotosViewController.swift in Sources */,
+				B35714FC225675CA00A5C925 /* PopularPhotosCollectionViewDelegate.swift in Sources */,
 				2C533E2E217FB2C50039EF73 /* SearchBar.swift in Sources */,
 				145725C0216529A3000BF359 /* SettingsViewController.swift in Sources */,
 				B3E89465220CA636005CB4DF /* SearchTableHandler.swift in Sources */,
