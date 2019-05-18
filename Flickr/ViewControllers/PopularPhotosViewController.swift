@@ -14,9 +14,50 @@ import UIKit
 
 class PopularPhotosViewController: UIViewController, TabBarSetupProtocol {
 
+    let collectionView:UICollectionView
+    let collectionViewDelegate = PopularPhotosCollectionViewDelegate()
+    let collectionViewDataSource = PopularPhotosCollectionViewDataSource()
+    let flowLayout = UICollectionViewFlowLayout()
+    private let searchService = PhotosSearchService()
+    required init?(coder aDecoder: NSCoder) {
+        self.collectionView = UICollectionView(frame: CGRect(x: 0, y: 0, width: 0, height: 0), collectionViewLayout:flowLayout)
+        super.init(coder: aDecoder)
+    }
+    
+    init() {
+        self.collectionView = UICollectionView(frame: CGRect(x: 0, y: 0, width: 0, height: 0), collectionViewLayout:flowLayout)
+        super.init(nibName: nil, bundle: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.red
+        setupCollectionView()
+
+        self.searchService.getPopularPhotos(for: "faves", onComplete: { photos in
+            self.collectionViewDataSource.models = photos
+            self.updateCollection()
+        })
+    }
+    
+    private func updateCollection() {
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
+        }
+    }
+    func setupCollectionView() {
+        self.collectionView.register(CollectionViewCell.classForCoder(), forCellWithReuseIdentifier: CollectionViewCell.reuseIdentifier)
+        self.collectionView.delegate = collectionViewDelegate
+        self.collectionView.dataSource = collectionViewDataSource
+        self.collectionView.translatesAutoresizingMaskIntoConstraints = false
+        self.collectionView.backgroundColor = UIColor.cyan
+        self.view.addSubview(self.collectionView)
+        
+        NSLayoutConstraint.activate([
+            self.collectionView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width),
+            self.collectionView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height),
+            self.collectionView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant:50),
+            ])
     }
     
 //MARK: TabBarSetupProtocol

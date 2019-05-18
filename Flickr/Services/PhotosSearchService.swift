@@ -23,6 +23,17 @@ class PhotosSearchService: NSObject {
         }
     }
     
+    func getPopularPhotos(for sortOrder: String, onComplete: @escaping ([ImageModel])-> Void) {
+        self.loadData(url: API.popularPhotosURL(page: 1, sortOrder: sortOrder)) { data in
+            if let pathData = data {
+                let models = Parser.parseToPathModels(data: pathData)
+                self.loadPhotos(models: models, onComplete: onComplete)
+                return
+            }
+            onComplete([])
+        }
+    }
+    
     private func loadPhotos(models: [ImagePathModel],onComplete: @escaping ([ImageModel])-> Void) {
         let group = DispatchGroup.init()
         var photos: [ImageModel] = []
